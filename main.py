@@ -1,9 +1,11 @@
 #import libraries
 import pygame as p
 import sys
+import numpy as np
 
 #import classes
 from constant import *
+from board import Board
 
 #create screen setup
 p.init()
@@ -11,15 +13,10 @@ screen = p.display.set_mode( (WIDTH, HEIGHT) )
 p.display.set_caption("TicTacToe")
 screen.fill( BKG_COLOR ) 
 
-class Board:
-    
-    def __init__(self):
-        pass
-
 class Game:
     
     def __init__(self):
-        selg.board = Board()
+        self.board = Board()  #from board class
         self.show_lines()
     
     def show_lines(self):
