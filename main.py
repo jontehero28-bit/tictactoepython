@@ -11,9 +11,15 @@ screen = p.display.set_mode( (WIDTH, HEIGHT) )
 p.display.set_caption("TicTacToe")
 screen.fill( BKG_COLOR ) 
 
+class Board:
+    
+    def __init__(self):
+        pass
+
 class Game:
     
     def __init__(self):
+        selg.board = Board()
         self.show_lines()
     
     def show_lines(self):
